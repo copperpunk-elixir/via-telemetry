@@ -1,5 +1,6 @@
-defmodule ViaTelemetry.Ubx.Nav.Relposned do
-  require ViaTelemetry.Ubx.ClassDefs, as: ClassDefs
+defmodule ViaTelemetry.Ubx.Standard.Nav.Relposned do
+  require ViaTelemetry.Ubx.Standard.ClassDefs, as: ClassDefs
+
   defmacro class, do: ClassDefs.nav()
   defmacro id, do: 0x3C
 

@@ -1,6 +1,6 @@
-defmodule ViaTelemetry.Ubx.VehicleCmds.ActuatorCmdDirect do
-  require ViaTelemetry.Ubx.ClassDefs, as: ClassDefs
-  require ViaTelemetry.Ubx.VehicleCmds.MsgIds, as: MsgIds
+defmodule ViaTelemetry.Ubx.Custom.VehicleCmds.ActuatorCmdDirect do
+  require ViaTelemetry.Ubx.Custom.ClassDefs, as: ClassDefs
+  require ViaTelemetry.Ubx.Custom.VehicleCmds.MsgIds, as: MsgIds
 
   @doc """
    This is a variable length message - You must define the keys and bytes on your own

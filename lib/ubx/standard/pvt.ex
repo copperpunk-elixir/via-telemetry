@@ -1,5 +1,5 @@
-defmodule ViaTelemetry.Ubx.Nav.Pvt do
-  require ViaTelemetry.Ubx.ClassDefs, as: ClassDefs
+defmodule ViaTelemetry.Ubx.Standard.Nav.Pvt do
+  require ViaTelemetry.Ubx.Standard.ClassDefs, as: ClassDefs
   defmacro class, do: ClassDefs.nav()
   defmacro id, do: 0x07
 

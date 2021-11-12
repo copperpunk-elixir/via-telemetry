@@ -1,5 +1,6 @@
 defmodule ViaTelemetry.Ubx.Utils do
   require Logger
+  require ViaUtils.Shared.ValueNames, as: SVN
 
   def variable_length_bytes_and_values(
         output_map,
@@ -38,5 +39,10 @@ defmodule ViaTelemetry.Ubx.Utils do
       value_key = Map.get(identifier_map, id_key, nil)
       if is_nil(value_key), do: acc, else: Map.put(acc, value_key, value)
     end)
+  end
+
+  @spec add_time(map) :: map()
+  def add_time(values) do
+    Map.put(values, SVN.time_since_boot_s(), ViaUtils.Process.time_since_boot_s())
   end
 end

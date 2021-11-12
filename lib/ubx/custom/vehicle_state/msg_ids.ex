@@ -1,6 +1,6 @@
-defmodule ViaTelemetry.Ubx.VehicleState.MsgIds do
-  alias ViaTelemetry.Ubx.VehicleState.Attitude
-  alias ViaTelemetry.Ubx.VehicleState.PositionVelocity
+defmodule ViaTelemetry.Ubx.Custom.VehicleState.MsgIds do
+  alias ViaTelemetry.Ubx.Custom.VehicleState.Attitude
+  alias ViaTelemetry.Ubx.Custom.VehicleState.PositionVelocity
 
   defmacro attitude(), do: 0x10
   defmacro position_velocity(), do: 0x11

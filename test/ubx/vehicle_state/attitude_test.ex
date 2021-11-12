@@ -2,7 +2,7 @@ defmodule ViaTelemetryUbx.VehicleState.AttitudeTest do
   use ExUnit.Case
   require Logger
   require ViaUtils.Shared.ValueNames, as: SVN
-  require ViaTelemetry.Ubx.VehicleState.Attitude, as: Attitude
+  require ViaTelemetry.Ubx.VehicleState.AttitudeAndRates, as: Attitude
   require ViaTelemetry.Ubx.ClassDefs, as: ClassDefs
   alias ViaUtils.Math, as: M
 
