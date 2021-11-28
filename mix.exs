@@ -1,10 +1,12 @@
 defmodule ViaTelemetry.MixProject do
   use Mix.Project
 
+  @version "0.1.1"
+
   def project do
     [
       app: :via_telemetry,
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
       deps: deps()
@@ -22,7 +24,8 @@ defmodule ViaTelemetry.MixProject do
   defp deps do
     [
       {:via_utils, path: "/home/ubuntu/Documents/Github/cp-elixir/libraries/via-utils"},
-      {:ubx_interpreter, path: "/home/ubuntu/Documents/Github/cp-elixir/libraries/ubx-interpreter"}
+      {:ubx_interpreter,
+       path: "/home/ubuntu/Documents/Github/cp-elixir/libraries/ubx-interpreter"}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
