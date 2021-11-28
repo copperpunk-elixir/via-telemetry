@@ -1,6 +1,6 @@
-defmodule ViaTelemetry.Ubx.Custom.VehicleCmds.ActuatorCmdDirect do
-  require ViaTelemetry.Ubx.Custom.ClassDefs, as: ClassDefs
-  require ViaTelemetry.Ubx.Custom.VehicleCmds.MsgIds, as: MsgIds
+defmodule ViaTelemetry.Ubx.VehicleCmds.ActuatorCmdDirect do
+  require ViaTelemetry.Ubx.MsgClasses, as: MsgClasses
+  require ViaTelemetry.Ubx.VehicleCmds.MsgIds, as: MsgIds
 
   @doc """
    This is a variable length message - You must define the keys and bytes on your own
@@ -11,7 +11,7 @@ defmodule ViaTelemetry.Ubx.Custom.VehicleCmds.ActuatorCmdDirect do
    channel_value (2 bytes, [-10000,10000])
 
   """
-  defmacro class, do: ClassDefs.vehicle_cmds()
+  defmacro class, do: MsgClasses.vehicle_cmds()
   defmacro id, do: MsgIds.actuator_cmd_direct()
   defmacro multipliers, do: 1.0e-4
 
@@ -37,4 +37,8 @@ defmodule ViaTelemetry.Ubx.Custom.VehicleCmds.ActuatorCmdDirect do
       multipliers()
     )
   end
+
+  def get_class(), do: class()
+  def get_id(), do: id()
+  def get_multipliers(), do: multipliers()
 end

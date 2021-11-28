@@ -1,8 +1,10 @@
-defmodule ViaTelemetry.Ubx.Standard.Nav.Relposned do
-  require ViaTelemetry.Ubx.Standard.ClassDefs, as: ClassDefs
+defmodule ViaTelemetry.Ubx.StandardNav.Relposned do
+  require ViaTelemetry.Ubx.MsgClasses, as: MsgClasses
+  require ViaTelemetry.Ubx.StandardNav.MsgIds, as: MsgIds
 
-  defmacro class, do: ClassDefs.nav()
-  defmacro id, do: 0x3C
+  defmacro class, do: MsgClasses.standard_nav()
+  # 0x3C
+  defmacro id, do: MsgIds.relposned()
 
   defmacro bytes,
     do: [1, 1, 2, 4, -4, -4, -4, -4, -4, 4, -1, -1, -1, -1, 4, 4, 4, 4, 4, 4, 4]
@@ -56,4 +58,10 @@ defmodule ViaTelemetry.Ubx.Standard.Nav.Relposned do
       reserved3(),
       flags()
     ]
+
+  def get_class(), do: class()
+  def get_id(), do: id()
+  def get_bytes(), do: bytes()
+  def get_multipliers(), do: multipliers()
+  def get_keys(), do: keys()
 end

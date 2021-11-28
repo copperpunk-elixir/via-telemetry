@@ -1,4 +1,4 @@
-defmodule ViaTelemetry.Ubx.Custom.Multipliers do
+defmodule ViaTelemetry.Ubx.Multipliers do
   require ViaUtils.Constants, as: VC
   defmacro accel_x_mpss(), do: VC.gravity() / 8192
   defmacro accel_y_mpss(), do: VC.gravity() / 8192
@@ -16,6 +16,9 @@ defmodule ViaTelemetry.Ubx.Custom.Multipliers do
   defmacro gyro_y_rps(), do: VC.deg2rad() / 16.4
   defmacro gyro_z_rps(), do: VC.deg2rad() / 16.4
   defmacro latitude_rad(), do: 1.0e-8
+  defmacro message_class(), do: 1
+  defmacro message_frequency_hz(), do: 1
+  defmacro message_id(), do: 1
   defmacro pilot_control_level(), do: 1
   defmacro pitch_rad(), do: 1.0e-4
   defmacro pitchrate_rps(), do: 1.0e-2

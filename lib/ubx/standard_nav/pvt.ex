@@ -1,7 +1,9 @@
-defmodule ViaTelemetry.Ubx.Standard.Nav.Pvt do
-  require ViaTelemetry.Ubx.Standard.ClassDefs, as: ClassDefs
-  defmacro class, do: ClassDefs.nav()
-  defmacro id, do: 0x07
+defmodule ViaTelemetry.Ubx.StandardNav.Pvt do
+  require ViaTelemetry.Ubx.MsgClasses, as: MsgClasses
+  require ViaTelemetry.Ubx.StandardNav.MsgIds, as: MsgIds
+  defmacro class, do: MsgClasses.standard_nav()
+  # 0x07
+  defmacro id, do: MsgIds.pvt()
 
   defmacro bytes,
     do: [
@@ -147,4 +149,10 @@ defmodule ViaTelemetry.Ubx.Standard.Nav.Pvt do
       magDec(),
       magAcc()
     ]
+
+  def get_class(), do: class()
+  def get_id(), do: id()
+  def get_bytes(), do: bytes()
+  def get_multipliers(), do: multipliers()
+  def get_keys(), do: keys()
 end

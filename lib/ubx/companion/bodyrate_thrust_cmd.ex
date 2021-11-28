@@ -1,11 +1,11 @@
-defmodule ViaTelemetry.Ubx.Custom.Companion.BodyrateThrottleCmd do
-  require ViaTelemetry.Ubx.Custom.ClassDefs, as: ClassDefs
-  require ViaTelemetry.Ubx.Custom.Companion.MsgIds, as: MsgIds
-  require ViaTelemetry.Ubx.Custom.Bytes, as: B
-  require ViaTelemetry.Ubx.Custom.Multipliers, as: M
+defmodule ViaTelemetry.Ubx.Companion.BodyrateThrottleCmd do
+  require ViaTelemetry.Ubx.MsgClasses, as: MsgClasses
+  require ViaTelemetry.Ubx.Companion.MsgIds, as: MsgIds
+  require ViaTelemetry.Ubx.Bytes, as: B
+  require ViaTelemetry.Ubx.Multipliers, as: M
   require ViaUtils.Shared.GoalNames, as: SGN
 
-  defmacro class, do: ClassDefs.companion()
+  defmacro class, do: MsgClasses.companion()
   defmacro id, do: MsgIds.bodyrate_throttle_cmd()
   defmacro bytes, do: [B.rollrate_rps(), B.pitchrate_rps(), B.yawrate_rps(), B.throttle_scaled()]
 

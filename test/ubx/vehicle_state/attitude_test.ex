@@ -2,8 +2,8 @@ defmodule ViaTelemetryUbx.VehicleState.AttitudeTest do
   use ExUnit.Case
   require Logger
   require ViaUtils.Shared.ValueNames, as: SVN
-  require ViaTelemetry.Ubx.VehicleState.AttitudeAndRates, as: Attitude
-  require ViaTelemetry.Ubx.ClassDefs, as: ClassDefs
+  require ViaTelemetry.Ubx.VehicleState.AttitudeAttrateVal, as: Attitude
+  require ViaTelemetry.Ubx.MsgClasses, as: MsgClasses
   alias ViaUtils.Math, as: M
 
   test "Construct Attitude msg" do
@@ -29,7 +29,7 @@ defmodule ViaTelemetryUbx.VehicleState.AttitudeTest do
 
     ubx_message =
       UbxInterpreter.construct_message_from_map(
-        ClassDefs.vehicle_state(),
+        MsgClasses.vehicle_state(),
         Attitude.id(),
         Attitude.bytes(),
         Attitude.multipliers(),

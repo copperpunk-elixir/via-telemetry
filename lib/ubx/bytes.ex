@@ -1,4 +1,4 @@
-defmodule ViaTelemetry.Ubx.Custom.Bytes do
+defmodule ViaTelemetry.Ubx.Bytes do
   defmacro accel_x_mpss, do: -2
   defmacro accel_y_mpss, do: -2
   defmacro accel_z_mpss, do: -2
@@ -16,6 +16,9 @@ defmodule ViaTelemetry.Ubx.Custom.Bytes do
   defmacro gyro_y_rps(), do: -2
   defmacro gyro_z_rps(), do: -2
   defmacro latitude_rad(), do: -4
+  defmacro message_class(), do: 1
+  defmacro message_frequency_hz(), do: 1
+  defmacro message_id(), do: 1
   defmacro pilot_control_level(), do: 1
   defmacro pitch_rad(), do: -2
   defmacro pitchrate_rps(), do: -2

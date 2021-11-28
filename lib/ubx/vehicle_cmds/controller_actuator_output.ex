@@ -1,10 +1,10 @@
-defmodule ViaTelemetry.Ubx.Custom.VehicleCmds.ControllerActuatorOutput do
-  require ViaTelemetry.Ubx.Custom.ClassDefs, as: ClassDefs
-  require ViaTelemetry.Ubx.Custom.Bytes, as: B
-  require ViaTelemetry.Ubx.Custom.Multipliers, as: M
-  require ViaTelemetry.Ubx.Custom.VehicleCmds.MsgIds, as: MsgIds
+defmodule ViaTelemetry.Ubx.VehicleCmds.ControllerActuatorOutput do
+  require ViaTelemetry.Ubx.MsgClasses, as: MsgClasses
+  require ViaTelemetry.Ubx.Bytes, as: B
+  require ViaTelemetry.Ubx.Multipliers, as: M
+  require ViaTelemetry.Ubx.VehicleCmds.MsgIds, as: MsgIds
   require ViaUtils.Shared.GoalNames, as: SGN
-  defmacro class, do: ClassDefs.vehicle_cmds()
+  defmacro class, do: MsgClasses.vehicle_cmds()
   defmacro id, do: MsgIds.controller_actuator_output()
 
   defmacro bytes,

@@ -1,5 +1,5 @@
-defmodule ViaTelemetry.Ubx.Custom.VehicleCmds.MsgIds do
-  alias ViaTelemetry.Ubx.Custom.VehicleCmds, as: Cmds
+defmodule ViaTelemetry.Ubx.VehicleCmds.MsgIds do
+  alias ViaTelemetry.Ubx.VehicleCmds, as: Cmds
   defmacro actuator_cmd_direct(), do: 0x99
   defmacro controller_actuator_output(), do: 0x00
   defmacro bodyrate_throttle_cmd(), do: 0x01

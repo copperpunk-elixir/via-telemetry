@@ -1,5 +1,5 @@
-defmodule ViaTelemetry.Ubx.Custom.Companion.MsgIds do
-  alias ViaTelemetry.Ubx.Custom.Companion, as: Companion
+defmodule ViaTelemetry.Ubx.Companion.MsgIds do
+  alias ViaTelemetry.Ubx.Companion, as: Companion
   defmacro dt_accel_gyro(), do: 0x00
   defmacro bodyrate_throttle_cmd(), do: 0x01
 

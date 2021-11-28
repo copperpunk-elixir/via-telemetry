@@ -1,10 +1,10 @@
-defmodule ViaTelemetry.Ubx.Custom.Companion.DtAccelGyro do
-  require ViaTelemetry.Ubx.Custom.ClassDefs, as: ClassDefs
-  require ViaTelemetry.Ubx.Custom.Bytes
-  require ViaTelemetry.Ubx.Custom.Companion.MsgIds, as: MsgIds
+defmodule ViaTelemetry.Ubx.Companion.DtAccelGyro do
+  require ViaTelemetry.Ubx.MsgClasses, as: MsgClasses
+  require ViaTelemetry.Ubx.Bytes
+  require ViaTelemetry.Ubx.Companion.MsgIds, as: MsgIds
   require ViaUtils.Constants, as: VC
   require ViaUtils.Shared.ValueNames, as: SVN
-  defmacro class, do: ClassDefs.companion()
+  defmacro class, do: MsgClasses.companion()
   defmacro id, do: MsgIds.dt_accel_gyro()
   defmacro bytes, do: [2, -2, -2, -2, -2, -2, -2]
 
@@ -29,4 +29,10 @@ defmodule ViaTelemetry.Ubx.Custom.Companion.DtAccelGyro do
       SVN.gyro_y_rps(),
       SVN.gyro_z_rps()
     ]
+
+  def get_class(), do: class()
+  def get_id(), do: id()
+  def get_bytes(), do: bytes()
+  def get_multipliers(), do: multipliers()
+  def get_keys(), do: keys()
 end
